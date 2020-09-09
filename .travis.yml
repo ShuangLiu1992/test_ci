@@ -1,0 +1,10 @@
+sudo: required
+
+matrix:
+  include:
+    ###################
+    - language: cpp
+      compiler: clang
+      os: linux
+      script:
+        - dlib/travis/build-and-test.sh
