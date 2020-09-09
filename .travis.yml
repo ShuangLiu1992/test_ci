@@ -1,17 +1,15 @@
 sudo: required
-
 matrix:
   include:
-    ###################
-    - language: cpp
-      compiler: clang
-      os: linux
-      script: ./configure
-
+  - language: cpp
+    compiler: clang
+    os: linux
+    script: "./configure"
 deploy:
   provider: releases
-  api_key: "SVXTd+eS0BdHDrSj3rf/0iS8eLWb7fLMBTGVXrwk0WKeL53lBodP4x2o/xjRgNYXEXmf26pNtGpyhI2l0Tc/K9iXzYCEPlaVhdbCMTnqMWGkZERlb8dWsGUTWoojk92AllE0cq87UUDKYM32C/gMDwTuB1eyZ3Yh9AnbzWIX4fAuVtFl0tOpC2BbWdV+fKSQp76xFNFcVsQILrCAbEwZsNjAVwSceAQMcymyLfujuJxMJIJ2yPMerf4hSlZMYddVp1XiqCwjK4GMFAMMjAvCLdo+BpS0IPMGIKU5xy9zhW4Uz82CL/71ybcwqiV4xaZbgfdRHttwd/JCL4tVkrRn5o7qiYGv/zzi7pdXgGVUIKbchDgRyyAW4omy9eHksufNcZ/g4vn6UTxuZVF4oO4DvB9n/1BuqC5i9lvh8kRlBy7GcSNMWa0C/S8uBKTEJcfDiC5HQ5sxNV1cFe6NOzIknVC62z5KIRcqrmRCrQLk/rmDfWhcN3mkXUgKuhKSeYgWYJIUZMAfxj6tnMaQ7vLu1tdwTuKEPGXbkZ792sgHt4lRPv6LS3bf4rqZUyhiIvNxHJ0wAK9mDD5BhOigvp6vNePUDdhEPQ1i3dUBWbdqTDlf1bE89RTQyvU8gUHGscDlJAGOYzxDJtuZsZPMMy9TJm4d4uEZPjTZ61oyi/rdiS0="
-  file: "build/*"
-  skip_cleanup: true
+  api_key:
+    secure: 6qDEulpsaIXJ8MQbdzrFaUhRvhc2gYvCsVM2WF77rBijBMee1RFn7La+Z2KQs4LSIsTvLlu6IItw2hk8lyDsZ+rZeiMw9ktitTzJvbOs89EneMedY+DwgoXiUYmpG86dTQkfDLJsf9+mntC6xDtFJheOm8MCZk1mIsy8nXjtBixLyBN0izBp0+heWT5lK8RwFu03AIQDsQBBRTM/QqKDf6T3smhG76H4JINXEYmRT2fN1Yt62+uoMdezNc0lV3rjTBdHgC/fFDQaQxYJZX9Hckqpy2FoUpNsh+zmTQcp5o8YSlstEzTn6U1NphGXM1Y3/Np6wFXJsj41wazXh4EFkeTUZu7Oeer0zgPNicew94KJLQbhCmEHbKbZj8TtMGADWOjTqvCkhRYoc4c2bq7PuHrzlyd6qALHkdiiRuqANBMeC86px5yBSCy99vcrsPYl0jX7/qiWkxCswDMNkgOVvhhQBtGCuJOmfnOT4sq06V73RtPN/oru/P4WMbKr5KS1ZshPRlZqNPOk762wQpykW0i9Knj6106i+0LBhbuwdCofH8kTpclgVZupBZQxzOKeflAMw2rl/uDvKGEpKDNysD24QGbJR2yTin/su7G/gKSehR813zdNBkfKXlwN7K/TyWOR/dT3zQRmpke0M/lWfxGgDbHtsSVGl561+5Hr7ms=
+  file: "*"
   on:
-    tags: true
+    repo: ShuangLiu1992/test_ci
+  skip_cleanup: 'true'
