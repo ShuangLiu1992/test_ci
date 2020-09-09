@@ -6,3 +6,4 @@ matrix:
     - language: cpp
       compiler: clang
       os: linux
+      script: ./configure
