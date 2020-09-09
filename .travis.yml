@@ -7,3 +7,11 @@ matrix:
       compiler: clang
       os: linux
       script: ./configure
+
+deploy:
+  provider: releases
+  api_key: "75c6e9bdcba34bdb7b4bcb7d71bb01e810356238"
+  file: "build/*"
+  skip_cleanup: true
+  on:
+    tags: true
