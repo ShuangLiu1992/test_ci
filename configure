@@ -1,4 +1,7 @@
+sudo apt install zip unzip
 mkdir build
 cd build
 cmake ..
 make
+cd ..
+zip -r build.zip build
